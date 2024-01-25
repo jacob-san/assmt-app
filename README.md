@@ -7,7 +7,7 @@
 
 ## Start the app
 
-To start the development server run `nx serve mobile`. Open your browser and navigate to http://localhost:4200/. Happy coding!
+To start the development server run `nx serve mobile`. Open your browser and navigate to http://http://localhost:4200/. Happy coding!
 
 
 ## Generate code
@@ -61,3 +61,4 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 - [Join the community](https://nx.dev/community)
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
+# assmt-app
