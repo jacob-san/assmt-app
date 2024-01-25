@@ -1,0 +1,12 @@
+{
+  "dashboard": {
+    "title": {
+      "hello": "مرحبًا", 
+      "welcomeUser": "مرحباً {{username}}", 
+      "signin": "تسجيل الدخول"
+    },
+    "validations": {
+      "invalidCredentials": "بيانات الاعتماد غير صالحة"
+    }
+  }
+}

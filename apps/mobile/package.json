@@ -6,9 +6,24 @@
     "@react-native/metro-config": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
+    "metro-config": "*",
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
-    "metro-config": "*"
+    "react-native-svg-transformer": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-screens": "*",
+    "react-native-paper": "*",
+    "styled-components": "*",
+    "react-hook-form": "*",
+    "@react-navigation/native": "*",
+    "rn-secure-storage": "*",
+    "react-i18next": "*",
+    "react-native-webview": "*",
+    "i18next": "*",
+    "@react-navigation/native-stack": "*",
+    "react-native-config": "*",
+    "@mui/material": "*",
+    "@mui/styles": "*"
   }
 }

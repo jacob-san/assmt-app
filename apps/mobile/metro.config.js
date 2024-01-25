@@ -16,6 +16,7 @@ const customConfig = {
     babelTransformerPath: require.resolve('react-native-svg-transformer'),
   },
   resolver: {
+    enableGlobalPackages: true,
     assetExts: assetExts.filter((ext) => ext !== 'svg'),
     sourceExts: [...sourceExts, 'svg'],
     blockList: exclusionList([/^(?!.*node_modules).*\/dist\/.*/]),

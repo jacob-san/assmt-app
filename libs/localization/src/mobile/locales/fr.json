@@ -1,0 +1,22 @@
+{
+  "signup": {
+    "labels": {
+      "username": "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "register": "S'inscrire",
+      "language": "Langue",
+      "english": "Anglais",
+      "arabic": "Arabe",
+      "french": "Français",
+      "german": "Allemand",
+      "country": "Country",
+      "uae": "UAE",
+      "india": "India"
+    },
+    "validation": {
+      "invalid_username": "invalid username",
+      "alphanumeric5": "Must be alphanumeric with at least 5 chars",
+      "alphanumeric6": "Must be alphanumeric with at least 6 chars"
+    }
+  }
+}

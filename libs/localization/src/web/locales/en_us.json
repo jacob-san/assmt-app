@@ -1,0 +1,12 @@
+{
+  "dashboard": {
+    "title": {
+      "hello": "Hello there,",
+      "welcomeUser": "Welcome {{username}}", 
+      "signin": "Sign in"
+    }, 
+    "validations": {
+      "invalidCredentials": "Invalid credentials"
+    }
+  }
+}

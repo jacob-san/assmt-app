@@ -1,0 +1,15 @@
+export const PRIMARY = '#D04848';
+export const ONPRIMARY = '#c5c5c5';
+export const ACCENT = '#ff5e00';
+export const BACKGROUND = '#313131';
+export const SURFACE = '#313131';
+export const ERROR = '#ff0000';
+export const TEXT = '#c5c5c5';
+export const ONBACKGROUND = '';
+export const ONSURFACE = '#00000';
+export const DISABLED = '#4A5052';
+export const PLACEHOLDER = '#fff';
+export const BACKDROP = '#313131';
+export const NOTIFICATION = '#313131';
+export const BLACK = '#000000';
+export const WHITE = '#ffffff';
