@@ -11,6 +11,17 @@ Monorepo with - web(React) & mobile(React Native) apps with shared libs/modules 
 - Component library for web & mobile as a lib in the project so that more apps can be added to the project and libraries can be re-used. 
 - Country specific feature config - changes expected to happen in different countries such as validation rules and microservice endpoints are moved to a country specific config, so that same feature can work for multiple countries with minimal change in config. 
 
+### Common libraries for Mobile & Web
+```
+components/shared
+components/web
+components/mobile
+localization
+theme
+network
+utils
+```
+
 ## Project graph
 
 ![project graph](demo/project-graph.png)
