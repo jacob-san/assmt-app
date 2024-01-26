@@ -3,7 +3,6 @@ import RNSecureStorage, { ACCESSIBLE } from 'rn-secure-storage';
 import {
   Button,
   TextInput,
-  Menu,
   PaperInput,
   BaseLayout,
   Flex,
@@ -19,6 +18,8 @@ import LanguageSelector from './components/LanguageSelector';
 import CountrySelector from './components/CountrySelector';
 import Routes from 'navigator/routes';
 import { useFetch } from '@network';
+import { encryption } from '@utils';
+import config from '../../config';
 
 type Credentials = {
   username: string;
@@ -46,8 +47,10 @@ const Signup = ({ navigation }) => {
   const usernameValue = watch('username');
   const onSubmit = async ({ username, password }: Credentials) => {
     /** Password to be hashed with salt before storing */
+    const encryptedPassword = encryption.cipher(password, config.ENCRYPTION_KEY);
+    // const encryptedPassword = encryption.cipher(password, '123');
     await RNSecureStorage.multiSet(
-      { username, password, country, lang },
+      { username, password: encryptedPassword, country, lang },
       { accessible: ACCESSIBLE.WHEN_UNLOCKED }
     );
     // signupRequest(_config.endpoints.signup, {
@@ -78,7 +81,7 @@ const Signup = ({ navigation }) => {
           label={t('signup.labels.username')}
           style={style.spacerTop}
           right={<PaperInput.Affix text={String(usernameValue?.length)} />}
-          autoCapitalize='none'
+          autoCapitalize="none"
           controllerProps={{
             control: control,
             name: 'username',
@@ -107,7 +110,7 @@ const Signup = ({ navigation }) => {
           style={style.spacerTop}
           label={t('signup.labels.password')}
           secureTextEntry={true}
-          autoCapitalize='none'
+          autoCapitalize="none"
         />
         <Button
           label={t('signup.labels.register')}

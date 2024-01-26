@@ -24,6 +24,7 @@
     "@react-navigation/native-stack": "*",
     "react-native-config": "*",
     "@mui/material": "*",
-    "@mui/styles": "*"
+    "@mui/styles": "*",
+    "react-native-crypto-js": "*"
   }
 }
