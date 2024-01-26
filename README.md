@@ -77,14 +77,15 @@ yarn nx run web:serve
 
 ## Demo
 
-Demo - language selected is English & country is UAE
+### Demo - language selected is English & country is UAE
+
 <div style="display: 'inline-block'">
 <img src="demo/ae_en.gif" width="250" />
 <img src="demo/ae_en.png" width="250" />
 </div>
 
 
-Demo - language selected is French & country is India
+### Demo - language selected is French & country is India
 
 <div style="display: 'inline-block'">
 <img src="demo/in_fr.gif" width="250" />
