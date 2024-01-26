@@ -19,5 +19,9 @@
       "alphanumeric5": "Must be alphanumeric with at least 5 chars",
       "alphanumeric6": "Must be alphanumeric with at least 6 chars"
     }
+  }, 
+  "signupSuccess": {
+    "title": "Congrats {{username}}",
+    "subtitle": "You've signed up"
   }
 }

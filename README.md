@@ -15,7 +15,7 @@ Monorepo with - web(React) & mobile(React Native) apps with shared libs/modules 
 
 ![project graph](demo/project-graph.png)
 
-### Structure
+### Structure 
 
 ```
 assmt-app
@@ -91,6 +91,7 @@ yarn nx run web:serve
 
 <div style="display: 'inline-block'">
 <img src="demo/ae_en.gif" width="250" />
+<img src="demo/en_success.png" width="250" />
 <img src="demo/ae_en.png" width="250" />
 </div>
 
@@ -99,5 +100,6 @@ yarn nx run web:serve
 
 <div style="display: 'inline-block'">
 <img src="demo/in_fr.gif" width="250" />
+<img src="demo/fr_success.png" width="250" />
 <img src="demo/in_fr.png" width="250" />
 </div>

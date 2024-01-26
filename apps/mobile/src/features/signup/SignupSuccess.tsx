@@ -27,8 +27,8 @@ const SignupSuccess = ({ navigation }) => {
 
   return (
     <Flex justifyContent="center" alignItems="center">
-      <Text variant="displaySmall">{`Congrats ${username}`}</Text>
-      <Text variant="headlineMedium">You've signed up</Text>
+      <Text variant="displaySmall">{t('signupSuccess.title', {username})}</Text>
+      <Text variant="headlineMedium">{t('signupSuccess.subtitle')}</Text>
       <Button
         label={t('signup.labels.login')}
         //   style={style.spacerTop}
