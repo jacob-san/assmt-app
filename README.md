@@ -20,6 +20,8 @@ localization
 theme
 network
 utils
+types
+common
 ```
 
 ## Project graph
