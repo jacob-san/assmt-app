@@ -2,6 +2,7 @@
 export default {
   validations: {
     username: {
+      required: true,
       type: 'regex',
       value: /^(?=.*[a-zA-Z])[a-zA-Z]\w{5,}$/,
       message: 'signup.validation.alphanumeric6',

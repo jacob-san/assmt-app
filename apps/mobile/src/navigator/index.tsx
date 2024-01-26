@@ -1,9 +1,10 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Routes from './routes';
 import Signup from '../features/signup/Signup';
 import SignupSuccess from '../features/signup/SignupSuccess';
 import WebComponent from '../features/webview';
+import Dashboard from '../features/dashboard';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,9 +12,10 @@ export const AppNavigation = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        cardStyle: {backgroundColor: '#FFFFFF'},
+        cardStyle: { backgroundColor: '#FFFFFF' },
         gestureEnabled: false,
-      }}>
+      }}
+    >
       <Stack.Screen name={Routes.STACK__PRE_LOGIN} component={PreLoginStack} />
       <Stack.Screen
         name={Routes.STACK__POST_LOGIN}
@@ -29,12 +31,14 @@ const PreLoginStack = () => {
       initialRouteName={Routes.ROUTE_SIGNUP}
       screenOptions={{
         gestureEnabled: false,
-      }}>
+      }}
+    >
       <Stack.Screen name={Routes.ROUTE_SIGNUP} component={Signup} />
       <Stack.Screen
         name={Routes.ROUTE_SIGNUP_SUCCESS}
         component={SignupSuccess}
       />
+      <Stack.Screen name={Routes.ROUTE_DASHBOARD} component={Dashboard} />
       <Stack.Screen name={Routes.ROUTE_WEBVIEW} component={WebComponent} />
     </Stack.Navigator>
   );
@@ -46,7 +50,8 @@ const PostLoginStack = () => {
       initialRouteName={Routes.ROUTE_DASHBOARD}
       screenOptions={{
         gestureEnabled: false,
-      }}>
+      }}
+    >
       <Stack.Screen name={Routes.ROUTE_DASHBOARD} component={Signup} />
     </Stack.Navigator>
   );

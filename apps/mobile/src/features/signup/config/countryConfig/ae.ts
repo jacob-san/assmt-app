@@ -1,5 +1,6 @@
 /** Configs for common features used across multiple countries
  * For ex: Signup could be a feature used across countries - all the changes applicable to the signup for a different country to be configured here
+ * This could be a lib shared across mobile and web for re-usability
  * */
 export default {
   validations: {

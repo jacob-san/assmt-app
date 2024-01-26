@@ -15,13 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@assmt-app/network": ["libs/network/src/index.ts"],
+      "@common": ["libs/common/src/index.ts"],
       "@auth": ["libs/auth/src/index.ts"],
       "@components": ["libs/components/src/index.ts"],
       "@components/mobile": ["libs/components/src/mobile/index.ts"],
       "@components/web": ["libs/components/src/web/index.ts"],
+      "@components/shared": ["libs/components/src/shared/index.ts"],
       "@localization/mobile": ["libs/localization/src/mobile/index.ts"],
       "@localization/web": ["libs/localization/src/web/index.ts"],
+      "@network": ["libs/network/src/index.ts"],
       "@theme": ["libs/theme/src/index.ts"],
       "@types": ["libs/types/src/index.ts"]
     }

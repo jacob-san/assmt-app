@@ -1,1 +1,1 @@
-export { default as useFetch } from './lib/network';
+export { default as useFetch, FetchResult, Status } from './hooks/useFetch';

@@ -18,6 +18,7 @@ import { Text } from 'react-native-paper';
 import LanguageSelector from './components/LanguageSelector';
 import CountrySelector from './components/CountrySelector';
 import Routes from 'navigator/routes';
+import { useFetch } from '@network';
 
 type Credentials = {
   username: string;
@@ -26,8 +27,10 @@ type Credentials = {
 
 const Signup = ({ navigation }) => {
   const [country, setCountry] = useState(COUNTRY.AE);
+  const _config = countryConfig[country];
   const [lang, setLang] = useState(LANGUAGE.EN);
   const { t } = useTranslation();
+  const [signupRequest, { data, status, error }] = useFetch();
   const {
     control,
     handleSubmit,
@@ -40,8 +43,6 @@ const Signup = ({ navigation }) => {
     },
   });
 
-  const _config = countryConfig[country];
-
   const usernameValue = watch('username');
   const onSubmit = async ({ username, password }: Credentials) => {
     /** Password to be hashed with salt before storing */
@@ -49,6 +50,12 @@ const Signup = ({ navigation }) => {
       { username, password, country, lang },
       { accessible: ACCESSIBLE.WHEN_UNLOCKED }
     );
+    // signupRequest(_config.endpoints.signup, {
+    //   method: 'post',
+    //   body: {
+    //     username, password
+    //   }
+    // })
     navigation.navigate(Routes.ROUTE_SIGNUP_SUCCESS);
   };
 
@@ -70,7 +77,8 @@ const Signup = ({ navigation }) => {
         <TextInput
           label={t('signup.labels.username')}
           style={style.spacerTop}
-          right={<PaperInput.Affix text={usernameValue?.length} />}
+          right={<PaperInput.Affix text={String(usernameValue?.length)} />}
+          autoCapitalize='none'
           controllerProps={{
             control: control,
             name: 'username',
@@ -83,7 +91,6 @@ const Signup = ({ navigation }) => {
             },
           }}
         />
-        {/* <Text>{usernameValue?.length}</Text> */}
         {errors.username && (
           <Text style={{ color: 'red' }} variant="labelSmall">
             {errors.username.message}
@@ -99,6 +106,8 @@ const Signup = ({ navigation }) => {
           }}
           style={style.spacerTop}
           label={t('signup.labels.password')}
+          secureTextEntry={true}
+          autoCapitalize='none'
         />
         <Button
           label={t('signup.labels.register')}

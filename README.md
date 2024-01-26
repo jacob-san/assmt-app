@@ -1,63 +1,84 @@
 # AssmtApp
 
-Monorepo with two apps - web & mobile with shared libs
+Monorepo with two apps - web(React) & mobile(React Native) with shared libs/modules with maximum re-usabilty within and across the apps in the project.
 
+## Project graph
 
+![project graph](demo/project-graph.png)
 
-## Start the app
-
-To start the development server run `nx serve mobile`. Open your browser and navigate to http://http://localhost:4200/. Happy coding!
-
-
-## Generate code
-
-If you happen to use Nx plugins, you can leverage code generators that might come with it.
-
-Run `nx list` to get a list of available plugins and whether they have generators. Then run `nx list <plugin-name>` to see what generators are available.
-
-Learn more about [Nx generators on the docs](https://nx.dev/plugin-features/use-code-generators).
-
-## Running tasks
-
-To execute tasks with Nx use the following syntax:
+### Structure
 
 ```
-nx <target> <project> <...options>
+assmt-app
+- apps
+  - mobile
+    - env
+        - in
+        - ae
+    - src
+    - features
+      - signup
+      - dashboard
+  - web
+    - features
+      - signin
+      - dashboard
+- libs
+  - common // Common logics and business rules to be used across the apps
+  - auth
+  - components
+    - mobile
+    - web
+  - localization
+  - network
+  - theme 
+  - types
 ```
 
-You can also run multiple targets:
+## Pre-requisites
+
+node > 18
+yarn
+
+## Getting started
+
+Clone the project
 
 ```
-nx run-many -t <target1> <target2>
+git clone https://github.com/jacob-san/assmt-app.git
+cd assmt-app
 ```
 
-..or add `-p` to filter specific projects
+Install dependencies
 
 ```
-nx run-many -t <target1> <target2> -p <proj1> <proj2>
+yarn
 ```
 
-Targets can be defined in the `package.json` or `projects.json`. Learn more [in the docs](https://nx.dev/core-features/run-tasks).
+### Start the app
 
-## Want better Editor Integration?
+To start the mobile app
 
-Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provides autocomplete support, a UI for exploring and running tasks & generators, and more! Available for VSCode, IntelliJ and comes with a LSP for Vim users.
+```
+yarn nx run run-ios
+```
 
-## Ready to deploy?
+To start the app with AE country config and uat config
 
-Just run `nx build demoapp` to build the application. The build artifacts will be stored in the `dist/` directory, ready to be deployed.
+```
+yarn ios:ae:uat
+```
 
-## Set up CI!
+To start the web app
 
-Nx comes with local caching already built-in (check your `nx.json`). On CI you might want to go a step further.
+```
+yarn nx run web:serve
+```
 
-- [Set up remote caching](https://nx.dev/core-features/share-your-cache)
-- [Set up task distribution across multiple machines](https://nx.dev/nx-cloud/features/distribute-task-execution)
-- [Learn more how to setup CI](https://nx.dev/recipes/ci)
+## Demo
 
-## Connect with us!
+Demo - language selected is English & country is UAE
+![Demo](demo/ae_en.gif)
 
-- [Join the community](https://nx.dev/community)
-- [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
-- [Follow us on Twitter](https://twitter.com/nxdevtools)
-# assmt-app
+Demo - language selected is French & country is India
+![Demo](repo/in_fr.gif)

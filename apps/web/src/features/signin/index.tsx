@@ -10,7 +10,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@auth';
 import { useTranslation } from 'react-i18next';
-
+import { useFetch } from '@network';
 declare global {
   interface Window {
     ReactNativeWebView: { postMessage: (data: string) => void };
@@ -42,7 +42,8 @@ const Signin = (): JSX.Element => {
   });
   const navigate = useNavigate();
   const auth = useAuth();
-  const {t} = useTranslation()
+  const { t } = useTranslation();
+  const [signInRequest, result] = useFetch();
   useEffect(() => {
     if (error) {
       setTimeout(() => setError(false), 1000);
@@ -52,13 +53,17 @@ const Signin = (): JSX.Element => {
   const setReceiver = (): void => {
     window.receiveLoginDetails = (data) => {
       if (
-        state.username === data.username &&
-        state.password === data.password
+        format(state.username) === data.username &&
+        format(state.password) === data.password
       ) {
         auth.setAuthenticated(true);
         auth.setCountry(data.country);
         auth.setLang(data.lang);
-
+        /** Verify on the server that the credentials stored on device is correct. */ 
+        // signInRequest(_config.signin.endpoint, {method: 'post', body: {
+        //   username: data.username, 
+        //   password: data.password
+        // }})
         navigate('dashboard', {
           state: {
             username: data.username,
@@ -94,19 +99,23 @@ const Signin = (): JSX.Element => {
       <Typography variant="h6" className={classes.title} sx={{ mt: 15 }}>
         Web sign in
       </Typography>
-      <Typography variant="h6" className={classes.title} sx={{ mt: 15 }}>
-        {JSON.stringify(auth)}
-      </Typography>
       <TextField
         sx={{ mt: 10 }}
         name="username"
         label="Username"
+        inputProps={{
+          autoCapitalize: 'none',
+        }}
         variant="outlined"
         onChange={onChangeText}
       />
       <TextField
         sx={{ mt: 2 }}
+        type='password'
         name="password"
+        inputProps={{
+          autoCapitalize: 'none',
+        }}
         label="Password"
         variant="outlined"
         onChange={onChangeText}

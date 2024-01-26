@@ -9,6 +9,7 @@ export { default as Toolbar } from '@mui/material/Toolbar';
 export { default as CssBaseline } from '@mui/material/CssBaseline';
 export { default as Grid } from '@mui/material/Grid';
 export { default as Paper } from '@mui/material/Paper';
+export { default as Loader } from '@mui/material/CircularProgress';
 import { createTheme } from '@mui/material/styles';
 export { ThemeProvider } from './theme';
 import { default as makeStyles } from '@mui/styles/makeStyles';
