@@ -79,9 +79,9 @@ yarn nx run web:serve
 
 Demo - language selected is English & country is UAE
 
-<img src="demo/ae_en.gif" width="200" />
+<img src="demo/ae_en.gif" width="250" />
 
 
 Demo - language selected is French & country is India
 
-<img src="repo/in_fr.gif" width="200" />
+<img src="demo/in_fr.gif" width="250" />
