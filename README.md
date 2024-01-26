@@ -37,7 +37,7 @@ assmt-app
 
 ## Pre-requisites
 
-node > 18
+node > 18 <br />
 yarn
 
 ## Getting started
