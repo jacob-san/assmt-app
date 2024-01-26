@@ -27,6 +27,9 @@ assmt-app
     - src
     - features
       - signup
+        - config
+          -in
+          -ae
       - dashboard
   - web
     - features
