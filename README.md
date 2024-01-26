@@ -1,6 +1,15 @@
 # AssmtApp
 
-Monorepo with two apps - web(React) & mobile(React Native) with shared libs/modules with maximum re-usabilty within and across the apps in the project.
+Monorepo with - web(React) & mobile(React Native) apps with shared libs/modules for maximum re-usabilty within and across the apps in the project.
+
+### Highlights
+
+- Credentials are encrypted and stored/retrieved securely on mobile device
+- Localization supporting 4 languages
+- Country support UAE and India with country specific validation rules and themes on post login dashboard.
+- Features are modular with no cross module dependency
+- Component library for web & mobile as a lib in the project so that more apps can be added to the project and libraries can be utilized
+- Country specific feature config - changes expected to happen in different countries such as validation rules and microservice are moved to a country specific config, so that same feature can work for multiple countries with minimal change in config. 
 
 ## Project graph
 
@@ -33,6 +42,7 @@ assmt-app
   - network
   - theme 
   - types
+  - utils // Encryption and other  re-usable utils
 ```
 
 ## Pre-requisites
